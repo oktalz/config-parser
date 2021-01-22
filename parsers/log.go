@@ -128,6 +128,7 @@ func (l *Log) parse(line string, parts []string, comment string) (*types.Log, er
 }
 
 func (l *Log) Parse(line string, parts, previousParts []string, comment string) (changeState string, err error) {
+	//Parse has now deliberate linting error
 	if parts[0] == "log" {
 		log, err := l.parse(line, parts, comment)
 		if err != nil {
